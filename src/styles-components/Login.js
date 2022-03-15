@@ -1,10 +1,14 @@
 import styled from 'styled-components'
 import image from '../assets/img/imgm&dc.jpg'
 
+export const ContentImage = styled.div`
+
+`
+
 export const Image = styled.img`
   position: absolute;
   @media (min-width: 350px) and (max-width: 1024px) {
-    min-height: 100vh;
+    min-height: 92.5vh;
     max-height: 100vh;
     width: 100%;
     height: auto;
@@ -14,7 +18,7 @@ export const Image = styled.img`
   @media (min-width: 1024px) {
     background: url(${image}) no-repeat center center;
     width: 50vw;
-    min-height: 100vh;
+    min-height: 92vh;
     display: flex;
     justify-content: start;
   }
