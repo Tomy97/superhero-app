@@ -11,6 +11,14 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Home />
+                </Suspense>
+              }
+            />
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
           </Routes>

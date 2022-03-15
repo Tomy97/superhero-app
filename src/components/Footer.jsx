@@ -1,17 +1,19 @@
 import { Typography } from '@mui/material'
 import React from 'react'
-import { FooterContainer } from '../styles-components/Footer'
+import { FooterContent, FooterClass, TextH3 } from '../styles-components/Footer'
 
 const Footer = () => {
   const name = 'Tomas Pandullo'
   return (
-    <>
-      <FooterContainer>
-        <Typography variant="h6" style={{ color: 'white', textAlign: 'center' }} gutterBottom component="div">
-          Pagina hecha por { name }
-        </Typography>
-      </FooterContainer>
-    </>
+
+    <FooterContent>
+      <FooterClass>
+        <TextH3>
+          Pagina hecha por {name}
+        </TextH3>
+      </FooterClass>
+    </FooterContent>
+
   )
 }
 
