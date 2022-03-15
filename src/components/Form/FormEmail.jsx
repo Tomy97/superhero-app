@@ -13,7 +13,7 @@ const validationSchema = yup.object({
 const FormEmail = props => {
   const formik = useFormik({
     initialValues: {
-      email: '',
+      email: props.email || '',
     },
     validationSchema: validationSchema,
   });
@@ -32,6 +32,9 @@ const FormEmail = props => {
   )
 }
 
-FormEmail.propTypes = {}
+FormEmail.propTypes = {
+  onChange: PropTypes.func,
+  
+}
 
 export default FormEmail

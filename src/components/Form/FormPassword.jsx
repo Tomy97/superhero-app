@@ -14,7 +14,7 @@ const validationSchema = yup.object({
 const FormPassword = props => {
   const formik = useFormik({
     initialValues: {
-      password: '',
+      password: props.password || '',
     },
     validationSchema: validationSchema,
   });

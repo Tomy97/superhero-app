@@ -1,13 +1,18 @@
-import { Button, Card, CardActions, CardContent, CardHeader, Grid } from '@mui/material'
+import React, { useState } from 'react'
 import { useFormik } from 'formik';
-import React from 'react'
-import FormPassword from '../components/Form/FormPassword';
 
 import { FormX, Image } from '../styles-components/Login';
+import FormPassword from '../components/Form/FormPassword';
 import FormEmail from '../components/Form/FormEmail';
+import { Button, Card, CardActions, CardContent, CardHeader, Grid } from '@mui/material'
 
 
 const Login = () => {
+  const [state, setstate] = useState({
+    email: '',
+    password: ''
+  })
+
   const formik = useFormik({
     onSubmit: (values) => {
       console.log(values);
@@ -30,10 +35,15 @@ const Login = () => {
                 </Grid>
               </CardContent>
               <CardActions>
-                <Button type="submit" variant="contained">Enviar</Button>
+                <Grid item xs={12} style={{ display: 'flex', justifyContent: 'end', marginRight: '10px' }}>
+                  <Button type="submit" variant="contained" >Enviar</Button>
+                </Grid>
               </CardActions>
             </form>
           </Card>
+          {
+            state.email && state.password
+          }
         </Grid>
       </FormX>
     </Grid >
